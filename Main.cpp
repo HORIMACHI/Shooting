@@ -1,8 +1,8 @@
 #include "DxLib.h"
-#include "Charcter.h"
-#include "ImageTable.h"
+#include "Character.h"
+//#include "ImageTable.h"
 
-void CheckKey(CCharcter* player);
+void CheckKey(CCharacter* player);
 
 int WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,int){
 
@@ -14,7 +14,7 @@ int WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,int){
 		}
 
 		int id = LoadGraph(_T("画像\\キャラクタ00.png"));
-		CCharcter* player  = new CCharcter(id);
+		CCharacter* player  = new CCharacter(id);
 
 		while(1)
 		{
@@ -25,7 +25,7 @@ int WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,int){
 			// 自機
 			{
 				CheckKey(player);
-				player->DrawCharcter();
+				player->DrawCharacter();
 			}
 			player->m_pEquipment.DrawShot();
 			player->m_pEquipment.MoveShot();
@@ -46,7 +46,7 @@ int WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,int){
         return 0;
 }
 
-void CheckKey(CCharcter* player)
+void CheckKey(CCharacter* player)
 {
 				if(CheckHitKey(KEY_INPUT_UP) == 1)
 					player->m_y -= 3;
