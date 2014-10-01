@@ -1,17 +1,21 @@
 #pragma once
 #include "Equipment.h"
-#include "CImageObject.h"
+#include "ImageObject.h"
 
-class CCharacter:public CImageObject
+class CCharacter : public CImageObject
 {
-	public:
-		CEquipment m_pEquipment;
+public:
+	//プレイヤーか敵の属性
+	//装備
+	//体力
+	//あたり判定範囲
+	CEquipment m_pEquipment;
 
-	public:
-		CCharacter(void);
-		CCharacter(int id);
-		~CCharacter(void);
-		void DrawCharacter(void);
-
+public:
+	CCharacter(void);
+	CCharacter(int id);
+	~CCharacter(void);
+	//移動				バーチャル
+	//ショットを打つ
 };
 
