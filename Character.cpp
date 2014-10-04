@@ -8,9 +8,9 @@ CCharacter::CCharacter(void)
 	m_y = 0;
 }
 
-CCharacter::CCharacter(int id)
+CCharacter::CCharacter(int ImageID)
 {
-	m_ImageID = id;
+	m_ImageID = ImageID;
 	m_x = 0;
 	m_y = 0;
 }

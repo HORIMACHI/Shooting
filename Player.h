@@ -1,11 +1,11 @@
 #pragma once
 #include "Imageobject.h"
 #include "Equipment.h"
+#include "Character.h"
 
-class CPlayer : public CImageObject
+class CPlayer : public CCharacter
 {
 public:
-	CEquipment m_pEquipment;
 
 public:
 	CPlayer(void);

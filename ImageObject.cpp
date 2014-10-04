@@ -15,6 +15,13 @@ CImageObject::CImageObject(int id)
 	m_y = 0;
 }
 
+CImageObject::CImageObject(int x, int y, int id)
+{
+	m_ImageID = id;
+	m_x = x;
+	m_y = y;
+}
+
 void CImageObject::DrawImage(void)
 {
 	DrawGraph(m_x, m_y, m_ImageID, TRUE);

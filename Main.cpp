@@ -16,10 +16,9 @@ int WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,int){
 		}
 
 		CShootingScene CShootingScene;
-
+		SetDrawScreen( DX_SCREEN_BACK ) ;
 		while(1)
-		{
-			SetDrawScreen( DX_SCREEN_BACK ) ;
+		{		
 			ClearDrawScreen();
 			CShootingScene.DrawImage();
 			ScreenFlip();			

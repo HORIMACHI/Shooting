@@ -10,6 +10,7 @@ public:
 public:
 	CImageObject(void);
 	CImageObject(int id);
+	CImageObject(int x, int y, int id);
 	virtual void DrawImage(void);
 	
 };
