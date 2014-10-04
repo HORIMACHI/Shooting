@@ -1,11 +1,16 @@
-/* キャライメージクラス */
+#pragma once
+
 class CImageObject
 {
-	public:
-		int m_id;
-		int m_x;
-		int m_y;
+public:
+	int m_ImageID;
+	int m_x;
+	int m_y;
 
-	public:
-		virtual void DrawCharacter(void)=0;//抽象クラス
+public:
+	CImageObject(void);
+	CImageObject(int id);
+	CImageObject(int x, int y, int id);
+	virtual void DrawImage(void);
+	
 };
