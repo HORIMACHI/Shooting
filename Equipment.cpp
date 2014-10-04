@@ -110,7 +110,7 @@ void CEquipment::DrawShot(void)
 	CShot* pShotBuffer = m_pShotFirst;
 	while(pShotBuffer != NULL)
 	{
-		pShotBuffer->DrawShot();
+		pShotBuffer->DrawImage();
 		pShotBuffer = pShotBuffer->m_pNextShot;	
 	}
 }
@@ -126,7 +126,7 @@ void CEquipment::CheckShot(void)
 	CShot* pShotBuffer = m_pShotFirst;
 	while(pShotBuffer == NULL)
 	{
-		if(pShotBuffer->m_nx > 640)
+		if(pShotBuffer->m_x > 640)
 		{
 			pShotBuffer = m_pShotFirst;
 			Remove(nCnt);
@@ -144,7 +144,7 @@ void CEquipment::MoveShot(void)
 	CShot* pShotBuffer = m_pShotFirst;
 	while(pShotBuffer != NULL)
 	{
-		pShotBuffer->m_nx = pShotBuffer->m_nx++;
+		pShotBuffer->m_x = pShotBuffer->m_x + 10;
 		pShotBuffer = pShotBuffer->m_pNextShot;
 	}
 	return;

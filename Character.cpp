@@ -3,14 +3,14 @@
 
 CCharacter::CCharacter(void)
 {
-	m_id = -1;
+	m_ImageID = -1;
 	m_x = 0;
 	m_y = 0;
 }
 
-CCharacter::CCharacter(int id)
+CCharacter::CCharacter(int ImageID)
 {
-	m_id = id;
+	m_ImageID = ImageID;
 	m_x = 0;
 	m_y = 0;
 }
@@ -20,8 +20,4 @@ CCharacter::~CCharacter(void)
 
 }
 
-void CCharacter::DrawCharacter(void)
-{
-	DrawGraph( m_x, m_y, m_id, TRUE );
-}
 
